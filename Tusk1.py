@@ -15,12 +15,11 @@
 На вход программе подается два числа: масса и рост человека, каждое на отдельной строке.
 Все входные числа являются вещественными, используйте для них тип данных float.'''
 
-from math import sqrt
-a, b = int(input()), int(input())
-print(a + b)
-print(a - b)
-print(a * b)
-print(a / b)
-print(a // b)
-print(a % b)
-print(sqrt(a ** 10 + b ** 10))
+weight, height = float(input()), float(input())
+index_IMT = weight / (height * height)
+if 18.5 <= index_IMT <= 25:
+    print('Оптимальная масса')
+elif index_IMT < 18.5:
+    print('Недостаточная масса')
+else:
+    print('Избыточная масса')
